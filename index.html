@@ -4,93 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Urivon Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #1e293b, #0f172a);
       color: white;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
       text-align: center;
     }
 
-    header {
-      padding: 80px 20px;
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      background: rgba(99,102,241,0.2);
+      border: 1px solid rgba(99,102,241,0.4);
+      border-radius: 999px;
+      font-size: 12px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
+      font-size: 3.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      letter-spacing: -1px;
     }
 
     p {
       font-size: 1.2rem;
-      opacity: 0.8;
+      color: rgba(255,255,255,0.7);
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
     }
 
     .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 24px;
-      background: #6366f1;
-      color: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      transition: 0.2s ease;
     }
 
-    .btn:hover {
+    .primary {
+      background: #6366f1;
+      color: white;
+    }
+
+    .primary:hover {
       background: #4f46e5;
     }
 
-    section {
-      padding: 60px 20px;
+    .secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
     }
 
     .card {
       background: rgba(255,255,255,0.05);
-      padding: 20px;
-      margin: 10px auto;
-      max-width: 600px;
-      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 14px;
+      text-align: left;
       backdrop-filter: blur(10px);
     }
 
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.65);
+    }
+
     footer {
-      padding: 30px;
-      font-size: 0.9rem;
-      opacity: 0.6;
+      text-align: center;
+      padding: 40px;
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.4);
+      margin-top: 60px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Urivon Studio</h1>
-    <p>Build. Create. Launch AI-powered experiences.</p>
-    <a class="btn" href="#">Get Started</a>
-  </header>
+  <div class="container">
 
-  <section>
-    <div class="card">
-      <h2>AI Story Engine</h2>
-      <p>Create cinematic stories, scripts, and interactive worlds instantly.</p>
+    <div class="badge">✨ AI Creative Studio</div>
+
+    <h1>Build. Create. Launch.</h1>
+
+    <p>
+      Urivon Studio helps creators turn ideas into modern AI-powered experiences and web apps in minutes.
+    </p>
+
+    <div class="buttons">
+      <a href="#" class="btn primary">Get Started</a>
+      <a href="#" class="btn secondary">Learn More</a>
     </div>
 
-    <div class="card">
-      <h2>Fast Deployment</h2>
-      <p>Turn ideas into live apps in minutes using GitHub + Vercel.</p>
+    <div class="grid">
+
+      <div class="card">
+        <h3>⚡ Fast Deployment</h3>
+        <p>Go from idea to live website instantly using GitHub + Vercel workflow.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎨 Modern Design</h3>
+        <p>Clean, responsive UI built for creators, startups, and developers.</p>
+      </div>
+
+      <div class="card">
+        <h3>🤖 AI Ready</h3>
+        <p>Designed to integrate AI tools, chat systems, and automation workflows.</p>
+      </div>
+
     </div>
 
-    <div class="card">
-      <h2>Creator Tools</h2>
-      <p>Designed for writers, builders, and digital creators.</p>
-    </div>
-  </section>
+    <footer>
+      © 2026 Urivon Studio. Built with Vercel.
+    </footer>
 
-  <footer>
-    © 2026 Urivon Studio. All rights reserved.
-  </footer>
+  </div>
 
 </body>
 </html>
